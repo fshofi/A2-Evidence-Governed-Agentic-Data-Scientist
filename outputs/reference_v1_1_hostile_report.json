@@ -1,0 +1,52 @@
+{
+  "purpose": "verify that human approval cannot override critical evidence failure",
+  "results": [
+    {
+      "action_authorised": false,
+      "analysis_complete": false,
+      "approval_supplied": true,
+      "critical_failures": [
+        {
+          "check": "target_proxy_contamination",
+          "evidence": "suspected target proxies: ['outcome_copy']",
+          "minimum_repair": "stop; remove the proxy only after its provenance and availability at the decision moment are reviewed",
+          "passed": false,
+          "severity": "critical"
+        },
+        {
+          "check": "temporal_leakage_duration",
+          "evidence": "duration is only known after a call; it cannot support pre-contact selection",
+          "minimum_repair": "exclude duration before training and preserve the exclusion in the audit trail",
+          "passed": false,
+          "severity": "critical"
+        }
+      ],
+      "fixture": "exact_target_proxy",
+      "status": "DATA_QUALITY_FAILURE"
+    },
+    {
+      "action_authorised": false,
+      "analysis_complete": false,
+      "approval_supplied": true,
+      "critical_failures": [
+        {
+          "check": "binary_target",
+          "evidence": "target values: ['maybe', 'no', 'yes']",
+          "minimum_repair": "stop and review target encoding",
+          "passed": false,
+          "severity": "critical"
+        },
+        {
+          "check": "temporal_leakage_duration",
+          "evidence": "duration is only known after a call; it cannot support pre-contact selection",
+          "minimum_repair": "exclude duration before training and preserve the exclusion in the audit trail",
+          "passed": false,
+          "severity": "critical"
+        }
+      ],
+      "fixture": "corrupted_target_label",
+      "status": "DATA_QUALITY_FAILURE"
+    }
+  ],
+  "suite": "A2 V1.1 hostile data fixtures"
+}
