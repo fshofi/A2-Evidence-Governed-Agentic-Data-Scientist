@@ -1,0 +1,19 @@
+project: A2-Evidence-Governed-Agentic-Data-Scientist
+version: 0.1.1
+seed: 20260913
+dataset:
+  uci_id: 222
+  artifact: bank-additional-full.csv
+  split: ordered_80_20
+governance:
+  deployment_moment: pre_contact
+  excluded_post_outcome_features:
+    - duration
+  require_human_approval: true
+  permit_automatic_external_action: false
+diagnostics:
+  calibration_bins: 10
+  subgroup_minimum_n: 100
+  illustrative_costs:
+    false_positive: 1.0
+    false_negative: 5.0
