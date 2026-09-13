@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "A2 Task Intake",
+  "type": "object",
+  "required": ["objective", "problem_type", "deployment_moment", "requested_action", "consequence"],
+  "properties": {
+    "objective": {"type": "string", "minLength": 1},
+    "problem_type": {"enum": ["descriptive", "predictive", "exploratory"]},
+    "deployment_moment": {"enum": ["pre_contact", "post_contact", "retrospective"]},
+    "requested_action": {"type": "string", "minLength": 1},
+    "consequence": {"enum": ["low", "moderate", "high"]},
+    "causal_language": {"type": "boolean", "default": false}
+  },
+  "additionalProperties": false
+}
+
