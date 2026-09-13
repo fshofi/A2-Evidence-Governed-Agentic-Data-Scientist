@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "a2-evidence-governed-data-scientist"
+version = "0.1.1"
+description = "A bounded, provenance-aware Data Science workflow with explicit approval and safe-stop controls."
+requires-python = ">=3.10"
+dependencies = ["pandas>=2.0,<3.0", "numpy>=1.24,<3.0", "scikit-learn>=1.3,<2.0", "PyYAML>=6.0,<7.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+outputs/audit-*.jsonl
+outputs/predictions-*.csv
+outputs/report-*.json
+data/raw/outer/
+data/raw/bank-additional/
+
