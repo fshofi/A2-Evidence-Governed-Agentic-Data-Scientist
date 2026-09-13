@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">A2 Evidence-Governed Agentic Data Scientist architecture</title>
+  <desc id="desc">A bounded pipeline from verified source through quality, modelling and validation to a separate human authority gate.</desc>
+  <defs>
+    <linearGradient id="header" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#071b31"/><stop offset="1" stop-color="#123c61"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#071b31" flood-opacity="0.10"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#4d6983"/></marker>
+    <style>
+      .sans{font-family:Inter,Arial,sans-serif}.eyebrow{font-size:18px;font-weight:700;letter-spacing:3px;fill:#91c5ef}.title{font-size:48px;font-weight:750;fill:#fff}.subtitle{font-size:22px;fill:#c7d9e9}.node-title{font-size:19px;font-weight:700;fill:#10243e}.node-copy{font-size:15px;fill:#5c6e80}.small{font-size:14px;fill:#657587}.metric{font-size:28px;font-weight:750;fill:#10243e}.label{font-size:14px;font-weight:700;letter-spacing:1px;fill:#657587}.white{fill:#fff}.amber{fill:#8d5400}.green{fill:#16815d}
+    </style>
+  </defs>
+  <rect width="1600" height="900" fill="#f3f6f9"/>
+  <rect width="1600" height="210" fill="url(#header)"/>
+  <text x="90" y="62" class="sans eyebrow">PROJECT A PRO · A2 V1.1</text>
+  <text x="90" y="125" class="sans title">Evidence before execution</text>
+  <text x="90" y="170" class="sans subtitle">Model performance, evidence sufficiency and authority are separate decisions.</text>
+  <rect x="1258" y="68" width="250" height="86" rx="14" fill="#ffffff12" stroke="#8eb8db"/>
+  <text x="1282" y="101" class="sans" font-size="14" fill="#b9d1e5">FINAL STATE</text>
+  <text x="1282" y="136" class="sans" font-size="23" font-weight="700" fill="#ffd185">HUMAN REVIEW</text>
+
+  <text x="90" y="270" class="sans label">RECONSTRUCTABLE EVIDENCE PATH</text>
+  <g filter="url(#shadow)">
+    <rect x="90" y="305" width="245" height="130" rx="14" class="white" stroke="#d8e0e8"/>
+    <rect x="365" y="305" width="245" height="130" rx="14" class="white" stroke="#d8e0e8"/>
+    <rect x="640" y="305" width="245" height="130" rx="14" class="white" stroke="#d8e0e8"/>
+    <rect x="915" y="305" width="245" height="130" rx="14" class="white" stroke="#d8e0e8"/>
+    <rect x="1190" y="305" width="318" height="130" rx="14" fill="#fff8e9" stroke="#d59635" stroke-width="2"/>
+  </g>
+  <text x="116" y="345" class="sans node-title">1 · Verified source</text><text x="116" y="378" class="sans node-copy">Pinned archive + CSV hashes</text><text x="116" y="404" class="sans node-copy">Schema and provenance</text>
+  <text x="391" y="345" class="sans node-title">2 · Admissibility</text><text x="391" y="378" class="sans node-copy">Decision moment fixed</text><text x="391" y="404" class="sans node-copy">Post-call duration excluded</text>
+  <text x="666" y="345" class="sans node-title">3 · Model</text><text x="666" y="378" class="sans node-copy">Transparent preprocessing</text><text x="666" y="404" class="sans node-copy">Logistic model + baseline</text>
+  <text x="941" y="345" class="sans node-title">4 · Validation</text><text x="941" y="378" class="sans node-copy">Ordered holdout + calibration</text><text x="941" y="404" class="sans node-copy">Thresholds + subgroups</text>
+  <text x="1216" y="345" class="sans node-title amber">5 · Authority gate</text><text x="1216" y="378" class="sans node-copy">Evidence does not grant permission</text><text x="1216" y="404" class="sans node-copy">No external action connector</text>
+  <path d="M335 370 H355" stroke="#4d6983" stroke-width="2" marker-end="url(#arrow)"/><path d="M610 370 H630" stroke="#4d6983" stroke-width="2" marker-end="url(#arrow)"/><path d="M885 370 H905" stroke="#4d6983" stroke-width="2" marker-end="url(#arrow)"/><path d="M1160 370 H1180" stroke="#4d6983" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="90" y="485" width="970" height="312" rx="16" fill="#fff" stroke="#d8e0e8" filter="url(#shadow)"/>
+  <text x="122" y="532" class="sans label">REFERENCE RUN · 41,188 RECORDS</text>
+  <line x1="122" y1="558" x2="1028" y2="558" stroke="#d8e0e8"/>
+  <text x="122" y="610" class="sans metric">0.748</text><text x="122" y="638" class="sans small">ROC AUC</text>
+  <text x="318" y="610" class="sans metric">0.527</text><text x="318" y="638" class="sans small">Average precision</text>
+  <text x="540" y="610" class="sans metric">0.191</text><text x="540" y="638" class="sans small">Brier score</text>
+  <text x="742" y="610" class="sans metric amber">24.5 pp</text><text x="742" y="638" class="sans small">Prevalence shift</text>
+  <text x="912" y="610" class="sans metric amber">0.321</text><text x="912" y="638" class="sans small">Worst calibration gap</text>
+  <rect x="122" y="688" width="906" height="77" rx="10" fill="#eef5fb"/>
+  <text x="146" y="720" class="sans" font-size="16" font-weight="700" fill="#174f7c">BOUNDED CONCLUSION</text>
+  <text x="146" y="748" class="sans" font-size="17" fill="#36536d">Retrospective ranking value exists; deployment and probability-reliability claims do not.</text>
+
+  <rect x="1094" y="485" width="414" height="312" rx="16" fill="#071b31" filter="url(#shadow)"/>
+  <text x="1125" y="532" class="sans" font-size="14" font-weight="700" letter-spacing="1" fill="#91c5ef">GOVERNANCE RESULT</text>
+  <text x="1125" y="590" class="sans" font-size="22" fill="#c7d9e9">Analysis complete</text><text x="1456" y="590" text-anchor="end" class="sans" font-size="22" font-weight="700" fill="#58c49b">TRUE</text>
+  <line x1="1125" y1="615" x2="1476" y2="615" stroke="#35516b"/>
+  <text x="1125" y="662" class="sans" font-size="22" fill="#c7d9e9">Action authorised</text><text x="1456" y="662" text-anchor="end" class="sans" font-size="22" font-weight="700" fill="#ffd185">FALSE</text>
+  <rect x="1125" y="704" width="351" height="62" rx="9" fill="#ffffff10" stroke="#d59635"/>
+  <text x="1300" y="743" text-anchor="middle" class="sans" font-size="18" font-weight="700" fill="#ffd185">REQUEST_HUMAN_REVIEW</text>
+
+  <text x="90" y="852" class="sans small">Public portfolio demonstration · AI-assisted development disclosed · No production, causal, fairness or independent-validation claim</text>
+  <text x="1510" y="852" text-anchor="end" class="sans small">Shofi Ahmed Uddin · 2026</text>
+</svg>
