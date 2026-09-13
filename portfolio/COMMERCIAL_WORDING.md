@@ -1,5 +1,10 @@
 # A2 Commercial Wording
 
+## Public proof links
+
+- Repository: https://github.com/fshofi/A2-Evidence-Governed-Agentic-Data-Scientist
+- Live evidence dashboard: https://fshofi.github.io/A2-Evidence-Governed-Agentic-Data-Scientist/
+
 ## CV — compact
 
 **A2 Evidence-Governed Agentic Data Scientist — portfolio system, 2026**  
@@ -18,6 +23,9 @@ On a pinned 41,188-record public dataset, A2 detected a post-contact leakage fea
 ## Recruiter introduction
 
 I have built A2, a working evidence-governed Data Science system that combines reproducible modelling with the controls often missing from notebook projects: provenance, temporal admissibility, calibration, threshold consequences, subgroup diagnostics, hostile-data safe stops and explicit human authority. I can demonstrate the complete repository and evidence dashboard in a short technical walkthrough.
+
+Repository: https://github.com/fshofi/A2-Evidence-Governed-Agentic-Data-Scientist  
+Live evidence dashboard: https://fshofi.github.io/A2-Evidence-Governed-Agentic-Data-Scientist/
 
 ## Client proposal paragraph
 
