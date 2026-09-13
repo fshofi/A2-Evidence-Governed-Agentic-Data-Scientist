@@ -51,6 +51,8 @@ def main() -> int:
     threshold_data = thresholds.get("rows", [])
     subgroup_rows = subgroups.get("rows", [])
 
+    status_html = escape(report["status"]).replace("_", "_<wbr>")
+
     html = f"""<!doctype html>
 <html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
 <title>A2 V1.1 Evidence Surface</title><script src='https://cdn.plot.ly/plotly-2.35.2.min.js'></script>
@@ -60,8 +62,8 @@ def main() -> int:
 header{{background:#071b31;color:white;padding:38px max(5vw,28px)}} h1{{margin:5px 0;font-size:clamp(28px,4vw,48px);letter-spacing:-.03em}} h2{{margin-top:0}}
 .eyebrow{{color:#9fc8ee;font-weight:700;letter-spacing:.12em;font-size:12px}} main{{max-width:1280px;margin:0 auto;padding:28px}}
 .grid{{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}} .two{{display:grid;grid-template-columns:repeat(auto-fit,minmax(440px,1fr));gap:18px}}
-.card{{background:white;border:1px solid var(--line);border-radius:12px;padding:20px;box-shadow:0 4px 18px #10243e0a}} .big{{font-size:29px;font-weight:760}}
-.muted{{color:var(--muted)}} .status,.warn{{color:var(--amber);font-weight:700}} section{{margin:22px 0}} .boundary{{border-left:5px solid var(--amber);background:#fff8eb}}
+.card{{min-width:0;background:white;border:1px solid var(--line);border-radius:12px;padding:20px;box-shadow:0 4px 18px #10243e0a}} .big{{font-size:29px;font-weight:760}}
+.muted{{color:var(--muted)}} .status,.warn{{color:var(--amber);font-weight:700}} .status{{font-size:clamp(18px,1.8vw,24px);line-height:1.12;overflow-wrap:anywhere}} section{{margin:22px 0}} .boundary{{border-left:5px solid var(--amber);background:#fff8eb}}
 table{{width:100%;border-collapse:collapse}} th,td{{padding:10px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}} th{{font-size:11px;text-transform:uppercase;color:var(--muted)}}
 .pass{{color:var(--green);font-weight:700}} .chain{{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;padding:0;list-style:none}}
 .chain li{{background:#eef5fb;border-left:4px solid var(--blue);padding:13px}} .chain span{{display:block;color:var(--muted);margin-top:5px}} .scroll{{overflow-x:auto}}
@@ -70,7 +72,7 @@ table{{width:100%;border-collapse:collapse}} th,td{{padding:10px;text-align:left
 </style></head><body>
 <header><div class='eyebrow'>PROJECT A PRO — A2 V1.1</div><h1>Evidence-Governed Data Science</h1><div>Model performance, evidence sufficiency and execution authority are separate decisions.</div><div class='pill'>Run {escape(report.get('run_id', 'unknown'))}</div></header>
 <main><div class='grid'>
-<div class='card'><div class='muted'>Decision status</div><div class='big status'>{escape(report['status'])}</div></div>
+<div class='card'><div class='muted'>Decision status</div><div class='big status'>{status_html}</div></div>
 <div class='card'><div class='muted'>Analysis complete</div><div class='big'>{str(report['analysis_complete']).upper()}</div></div>
 <div class='card'><div class='muted'>Action authorised</div><div class='big'>{str(report['action_authorised']).upper()}</div></div>
 <div class='card'><div class='muted'>Expected calibration error</div><div class='big'>{calibration.get('expected_calibration_error', 0):.3f}</div></div>
