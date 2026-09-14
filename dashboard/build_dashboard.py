@@ -100,7 +100,7 @@ Plotly.newPlot('thresholds',[{{type:'scatter',mode:'lines+markers',x:th.map(d=>d
 const sg={json.dumps(subgroup_rows)}; const colors={{age_band:'#177ddc',job:'#16815d',contact:'#a45f00'}};
 Plotly.newPlot('subgroups',Object.keys(colors).map(field=>{{const rows=sg.filter(d=>d.field===field);return {{type:'bar',name:field,x:rows.map(d=>d.group),y:rows.map(d=>d.brier_score),text:rows.map(d=>'n='+d.n),marker:{{color:colors[field]}}}}}}),{{...base,barmode:'group',xaxis:{{tickangle:-40}},yaxis:{{title:'Brier score (lower is better)'}},legend:{{orientation:'h'}}}},{{responsive:true,displaylogo:false}});
 </script></body></html>"""
-    destination = root / "dashboard" / "index.html"
+    destination = root / "dashboard" / "reference.html"
     destination.write_text(html, encoding="utf-8")
     print(destination)
     return 0
