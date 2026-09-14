@@ -92,7 +92,7 @@ function agentPlan(critical,warnings){const n=Number($('sample-size').value),mis
 ['04 · Leakage Agent','Decision-time feature admissibility', $('leakage').value==='yes'?'fail':$('leakage').value==='unknown'?'warn':'pass'],
 ['05 · Validation Agent','Out-of-sample design', $('validation').value==='none'?'fail':$('validation').value==='random'?'warn':'pass'],
 ['06 · Uncertainty Agent','Shift and calibration', shift>=10||ece>.05?'warn':'pass'],
-['07 · Governance Agent','Claim boundary', $('causal').value==='yes'?'fail':'pass'],
+['07 · Governance Agent','Claim + evidence-frame boundary', $('causal').value==='yes'?'fail':$('context-completeness').value==='complete'?'pass':'warn'],
 ['08 · Authority Agent','Permission to execute', operational?'fail':'pass']];}
 async function animateAgents(plan){agentChain.replaceChildren();audit.textContent='';agentSurface.classList.add('show');for(const [name,task,state] of plan){const el=document.createElement('div'),b=document.createElement('b'),s=document.createElement('span');el.className='agent running';b.textContent=name;s.textContent='RUNNING · '+task;el.append(b,s);agentChain.appendChild(el);audit.textContent+=`[RUN] ${name}: ${task}\n`;await new Promise(resolve=>setTimeout(resolve,160));el.className='agent '+(state==='fail'?'fail-agent':state==='warn'?'warn-agent':'pass-agent');s.textContent=state.toUpperCase()+' · '+task;audit.textContent+=`[${state.toUpperCase()}] ${name}\n`;audit.scrollTop=audit.scrollHeight;}}
 form.addEventListener('reset',()=>setTimeout(()=>{report.classList.remove('show');primeAgents()},0));
