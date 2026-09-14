@@ -49,8 +49,8 @@ python -m unittest discover -s tests -v
 python scripts/run_hostile_fixtures.py
 ```
 
-The pinned UCI archive is included for reproducibility under CC BY 4.0. Remove `--offline` to download it when absent. Open `dashboard/index.html` after generating the report.
-The interactive charts load Plotly from its public CDN; use `portfolio/dashboard-preview.png` as the offline static preview.
+The pinned UCI archive is included for reproducibility under CC BY 4.0. Remove `--offline` to download it when absent. `dashboard/index.html` is the primary interactive agent workspace; `python dashboard/build_dashboard.py` regenerates the fixed reference report at `dashboard/reference.html` so the live workspace is never overwritten.
+The dashboard uses Plotly from its public CDN. The primary workspace now includes live Plotly governance visualisation in addition to the fixed reference charts; use `portfolio/dashboard-preview.png` as the offline static preview.
 
 Adversarial safe-stop:
 
@@ -154,7 +154,7 @@ schemas/      machine-readable intake contract
 src/a2/       bounded workflow services
 scripts/      runnable entry point
 tests/        governance and quality regression tests
-dashboard/    generated Plotly evidence surface
+dashboard/    interactive agent workspace + generated Plotly reference surface
 evidence/     claim ledger
 docs/         architecture and decision records
 data/raw/     pinned CC BY dataset archive
