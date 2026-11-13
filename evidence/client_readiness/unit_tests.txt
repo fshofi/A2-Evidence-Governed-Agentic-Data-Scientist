@@ -1,0 +1,23 @@
+$ python -m unittest discover -s tests -v
+test_real_cached_source_and_csv_hashes_pass (test_data.ProvenanceTests.test_real_cached_source_and_csv_hashes_pass) ... ok
+test_tampered_archive_fails_closed (test_data.ProvenanceTests.test_tampered_archive_fails_closed) ... ok
+test_analysis_does_not_authorise_action (test_governance.GovernanceTests.test_analysis_does_not_authorise_action) ... ok
+test_causal_request_safe_stops (test_governance.GovernanceTests.test_causal_request_safe_stops) ... ok
+test_explicit_approval_is_visible (test_governance.GovernanceTests.test_explicit_approval_is_visible) ... ok
+test_calibration_diagnostics_are_reconstructable (test_hardening.HardeningTests.test_calibration_diagnostics_are_reconstructable) ... ok
+test_corrupted_target_encoding_fails_closed (test_hardening.HardeningTests.test_corrupted_target_encoding_fails_closed) ... ok
+test_exact_target_proxy_fails_closed (test_hardening.HardeningTests.test_exact_target_proxy_fails_closed) ... ok
+test_subgroup_diagnostics_suppress_tiny_groups (test_hardening.HardeningTests.test_subgroup_diagnostics_suppress_tiny_groups) ... ok
+test_threshold_costs_declare_no_selected_threshold (test_hardening.HardeningTests.test_threshold_costs_declare_no_selected_threshold) ... ok
+test_missing_target_is_critical (test_quality.QualityTests.test_missing_target_is_critical) ... ok
+test_pre_contact_duration_is_excluded (test_quality.QualityTests.test_pre_contact_duration_is_excluded) ... ok
+test_severe_missingness_is_critical (test_quality.QualityTests.test_severe_missingness_is_critical) ... ok
+test_tiny_sample_is_critical (test_quality.QualityTests.test_tiny_sample_is_critical) ... ok
+test_unknown_is_not_treated_as_clean (test_quality.QualityTests.test_unknown_is_not_treated_as_clean) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.157s
+
+OK
+
+Exit: 0

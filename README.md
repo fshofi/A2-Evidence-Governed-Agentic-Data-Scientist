@@ -1,3 +1,13 @@
+# Pre-Action Model Evidence Review — CVDNA A2
+
+Expose leakage, population shift and unreliable probabilities before predictive scores shape real decisions.
+
+**Commercial use:** a bounded review led by Shofi Ahmed Uddin, supported by reproducible software. [Pilot scope](SERVICE_OFFER.md) · [Interactive demonstration](dashboard/index.html) · [Current verification](dashboard/verification.md).
+
+The client retains action authority. Historical ranking performance does not establish present-day calibration, consent, fairness or deployment readiness.
+
+---
+
 # Project A Pro — A2
 
 ## Evidence-Governed Agentic Data Scientist
